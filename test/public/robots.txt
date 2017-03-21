@@ -1,0 +1,14 @@
+Sitemap: http://www.justcleanwindowcleaning.com/sitemap.xml
+
+User-agent: Google
+Disallow: /test/
+Disallow: /cpanel
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /etc/
+Disallow: /mail/
+Disallow: /public_ftp/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /cpanel
