@@ -34,15 +34,16 @@ of those sections to manage the look and feel of the site. */
 .intro-section {
     min-height: 100%;
     padding-top: 150px;
+    padding-bottom: 100px;
     text-align: center;
     background: #fff;
-    opacity: .7;
+    opacity: .8;
 }
 
 .about-section {
     min-height: 100%;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
     background: #eee;
     opacity: .9;
@@ -50,8 +51,8 @@ of those sections to manage the look and feel of the site. */
 
 .services-section {
     min-height: 100%;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
     background: #fff;
     opacity: .9;
@@ -59,8 +60,8 @@ of those sections to manage the look and feel of the site. */
 
 .contact-section {
     min-height: 100%;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
     background: #eee;
     opacity: .9;
@@ -91,4 +92,5 @@ body {
   background: url("../images/bg3.jpg");
   background-size: cover;
   background-attachment: fixed;
+  font-size: 175%;
 }
