@@ -2,23 +2,56 @@
 <html lang="en">
 
 <head>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            // collect the value
+            $title = $_REQUEST["place"];
+            if ($title) {
+                echo "<link href=”http://www.justcleanwindowcleaning.com” rel=”canonical” />";
+            }
+        }
+    ?>
+
+    <link rel="alternate" href="http://www.justcleanwindowcleaning.com" hreflang="en-us" />
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Service",
+        "provider": [{
+          "@type": "Organization",
+          "url": "http://justcleanwindowcleaning.com/",
+          "name": "Just Clean Window Cleaning",
+          "telephone": "+1-618-806-7476",
+          "image": "http://www.justcleanwindowcleaning.com/images/logo.png",
+          "description": "Home and commercial window washing, hard water stains, indoor and outdoor windows, and window screen washing",
+          "areaServed": "Metro East IL, St. Louis, Madison County, St. Clair County, Clinton County",
+          "address": [{
+              "streetAddress": "1007 Matthew Dr. O'Fallon IL",
+              "addressLocality": "<?php if (!empty($title)) { echo $title; } else { echo "O'fallon";} ?>",
+              "addressRegion": "IL"
+          }],
+          "email": "justcleanwindowcleaning@gmail.com"
+       	}],
+        "serviceType": "interior window cleaning, exterior window cleaning, window screen cleaning, hard water stain removal",
+        "isSimilarTo": "house washing, roof washing, pressure cleaning, window replacement",
+        "description": "Home window cleaning, commercial window cleaning, Window cleaner, window cleaning, window washer, window cleaning service, window washing service, home window cleaner, residential window cleaning service, residential window washing, residential window washers, residential window cleaning, professional window cleaner, home window washing, outdoor window cleaner, professional commercial window cleaning, exterior window cleaner, commercial window cleaners, exterior window cleaning services, professional window washers, window cleaning business, commercial window washers, home window cleaning, residential window cleaners, all clean windows"
+    }
+    </script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Home and commercial window cleaning for <?php if (!empty($title)) { echo $title." and surrounding "; } ?>Metro East">
+    <meta name="author" content="Just Clean Window Cleaning">
 
-    <title>Just Clean Window Cleaning</title>
+    <title>Just Clean Window Cleaning
+        <?php if (!empty($title)) {
+            echo " - ".$title;
+        } ?>
+    </title>
 
-    <!-- Font Awesome CSS -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap and Navigation CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-    <!-- Bootstrap Social CSS -->
-    <link href="css/bootstrap-social.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,14 +76,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"></a>
             <div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="">
+                    <li>
                         <a class="page-scroll" href="#page-top">Top</a>
                     </li>
                     <li>
@@ -73,13 +105,19 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section id="intro" class="intro-section" itemtype="http://schema.org/LocalBusiness">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" itemscope>
                   <img src="images/logo.png" alt="Just Clean Window Cleaning is a professional window cleaning service serving St. Clair County, Madison County, and Clinton County"><br /><br />
-                  <h1>(618) 806-7476</h1>
-                  <p>Proudly serving the Metro East in St. Clair, Madison, and Clinton Counties</p>
+                  <h1><b>(618) 806-7476</b></h1>
+                  <?php if (!empty($title)) {
+                            echo "<p>Proudly serving ".$title." and surrounding Metro East</p>";
+                        }
+                      else {
+                            echo "<p>Proudly serving the Metro East in St. Clair, Madison, and Clinton Counties</p>";
+                      }
+                  ?>
                   <h2>Amazing Spring Special 2017!!!</h2>
                   <h3><b>Just $159 for up to 20 exterior windows</b></h3>
                   <p>
@@ -202,18 +240,43 @@
                     </table>
                     <br />
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-2">
+                          <img src="images/guarantee_opt.png" alt="We guarantee your windows to be spot and streak free!">
+                      </div>
+                      <div class="col-sm-5">
                         <p style="text-align:left;">* It doesn’t matter what the weatherman says. <strong>If it rains within 24 hours after your windows are cleaned and you call the next business day, you will get a free touch-up on the affected windows.</strong> We want your windows to look great rain or shine!</p>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-5">
                         <p style="text-align:left;">** We guarantee our window cleaning. If you’re not 100% satisfied, we’ll come back and make it right. No questions asked.</p>
                       </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3>Ask us about hard water stain removal!</h3>
+                            <p>Hard water stain removal and sealing are not included in our regular service prices. However, the additional cost is quite reasonable and can be added to your regular cleaning on a per-pane basis.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="images/hardwater1.jpeg" alt="Hard water stain removal is not included in regular service prices, but can be added to a regular cleaning on a per-pane basis.">
+                        </div>
                     </div>
                     <br /><br />
 
                     <h1>Areas Serviced</h1>
-                    <p>St. Clair County &bull; Madison County &bull; Clinton County &bull; Washington County &bull; Monroe County &bull; Randolph County</p>
-                    <p style="font-size:smaller">Belleville &bull; Cahokia &bull; Caseyville &bull; Collinsville &bull; Fairview Heights &bull; Fayetteville &bull; Freeburg &bull; Lebanon &bull; Lenzburg &bull; Marissa &bull; Mascoutah &bull; Millstadt &bull; New Athens &bull; O'Fallon &bull; Scott AFB &bull; Shiloh &bull; Smithton &bull; St. Libory &bull; Summerfield &bull; Swansea &bull; Alton &bull; Edwardsville &bull; Granite City &bull; Highland &bull; Troy &bull; Wood River &bull; Alhambra &bull; Bethalto &bull; East Alton &bull; Glen Carbon &bull; Godfrey &bull; Grantfork &bull; Hamel &bull; Marine &bull; Maryville &bull; New Douglas &bull; Pontoon Beach &bull; Roxana &bull; South Roxana &bull; St. Jacob &bull; Breese &bull; Carlyle &bull; Trenton &bull; Albers &bull; Aviston &bull; Bartelso &bull; Beckemeyer &bull; Damiansville &bull; Germantown &bull; Hoffman &bull; Keyesport (Southwestern half) &bull; Huey &bull; New Baden &bull; Addieville &bull; Ahsley &bull; Du Bois &bull; Hoyleton &bull; Irvington &bull; Nashville &bull; New Minden &bull; Oakdale &bull; Okawville &bull; Radom &bull; Richview &bull; Venedy &bull; Wamac &bull; Columbia &bull; Waterloo &bull; Hecker</p>
+                    <p><a href="?place=St.+Clair+County">St. Clair County</a> &bull; <a href="?place=Madison+County">Madison County</a> &bull; <a href="?place=Clinton+County">Clinton County</a> &bull; <a href="?place=Washington+County">Washington County</a> &bull; <a href="?place=Monroe+County">Monroe County</a> &bull; <a href="?place=Randolph+County">Randolph County</a></p>
+                    <p><a href="?place=Belleville">Belleville</a> &bull; <a href="?place=Cahokia">Cahokia</a> &bull; <a href="?place=Caseyville">Caseyville</a> &bull; <a href="?place=Collinsville">Collinsville</a> &bull; <a href="?place=Fairview+Heights">Fairview Heights</a> &bull;
+                    <a href="?place=Fayetteville">Fayetteville</a> &bull; <a href="?place=Freeburg">Freeburg</a> &bull; <a href="?place=Lebanon">Lebanon</a> &bull; <a href="?place=Lenzburg">Lenzburg</a> &bull;<a href="?place=Marissa">Marissa</a> &bull;
+                    <a href="?place=Mascoutah">Mascoutah</a> &bull; <a href="?place=Millstadt">Millstadt</a> &bull; <a href="?place=New+Athens">New Athens</a> &bull; <a href="?place=O'Fallon">O'Fallon</a> &bull; <a href="?place=Scott+Airforce+Base">Scott AFB</a> &bull;
+                    <a href="?place=Shiloh">Shiloh</a> &bull; <a href="?place=Smithton">Smithton</a> &bull; <a href="?place=St.+Libory">St. Libory</a> &bull; <a href="?place=Summerfield">Summerfield</a> &bull; <a href="?place=Swansea">Swansea</a> &bull;
+                    <a href="?place=Alton">Alton</a> &bull; <a href="?place=Edwardsville">Edwardsville</a> &bull; <a href="?place=Granite+City">Granite City</a> &bull; <a href="?place=Highland">Highland</a> &bull; <a href="?place=Troy">Troy</a> &bull;
+                    <a href="?place=Wood+River">Wood River</a> &bull; <a href="?place=Alhambra">Alhambra</a> &bull; <a href="?place=Bethalto">Bethalto</a> &bull; <a href="?place=East+Alton">East Alton</a> &bull; <a href="?place=Glen+Carbon">Glen Carbon</a> &bull;
+                    <a href="?place=Godfrey">Godfrey</a> &bull; <a href="?place=Grantfork">Grantfork</a> &bull; <a href="?place=Hamel">Hamel</a> &bull; <a href="?place=Marine">Marine</a> &bull; <a href="?place=Maryville">Maryville</a> &bull;
+                    <a href="?place=New+Douglas">New Douglas</a> &bull; <a href="?place=Pontoon+Beach">Pontoon Beach</a> &bull; <a href="?place=Roxana">Roxana</a> &bull; <a href="?place=South+Roxana">South Roxana</a> &bull; <a href="?place=St.+Jacob">St. Jacob</a> &bull;
+                    <a href="?place=Breese">Breese</a> &bull; <a href="?place=Carlyle">Carlyle</a> &bull; <a href="?place=Trenton">Trenton</a> &bull; <a href="?place=Albers">Albers</a> &bull; <a href="?place=Aviston">Aviston</a> &bull;
+                    <a href="?place=Bartelso">Bartelso</a> &bull; <a href="?place=Beckemeyer">Beckemeyer</a> &bull; <a href="?place=Damiansville">Damiansville</a> &bull; <a href="?place=Germantown">Germantown</a> &bull; <a href="?place=Hoffman">Hoffman</a> &bull;
+                    <a href="?place=Keyesport+(Southwestern+Half)">Keyesport (Southwestern half)</a> &bull; <a href="?place=Huey">Huey</a> &bull; <a href="?place=New+Baden">New Baden</a> &bull; <a href="?place=Addieville">Addieville</a> &bull; <a href="?place=Ashely">Ashley</a> &bull;
+                    <a href="?place=Du+Bois">Du Bois</a> &bull; <a href="?place=Hoyleton">Hoyleton</a> &bull; <a href="?place=Irvington">Irvington</a> &bull; <a href="?place=Nashville">Nashville</a> &bull; <a href="?place=New+Minden">New Minden</a> &bull;
+                    <a href="?place=Oakdale">Oakdale</a> &bull; <a href="?place=Okawville">Okawville</a> &bull; <a href="?place=Radom">Radom</a> &bull; <a href="?place=Richview">Richview</a> &bull; <a href="?place=Venedy">Venedy</a> &bull;
+                    <a href="?place=Wamac">Wamac</a> &bull; <a href="?place=Columbia">Columbia</a> &bull; <a href="?place=Waterloo">Waterloo</a> &bull; <a href="?place=Hecker">Hecker</a></p>
                 </div>
             </div>
         </div>
@@ -226,12 +289,14 @@
                 <div class="col-lg-12">
                     <h1>Contact us for More Information</h1>
                     <p>Before calling, take count of the windows of your home that need cleaning- this is how we count them here at Just Clean Window Cleaning:<br />
-                      <img src="images/windowCount.jpg" alt="In order to give an accurate estimate for your future service, use this guide to count the windows on your home"></p>
+                      <img src="images/windowCount.jpg" alt="In order to give an accurate estimate for your future service, use this guide to count the windows on your home" alt="We guarantee that your windows will be spot and streak free!"></p>
                     <strong>Call us at 618-806-7476</strong><br />
                     <p>Or, use the link below to send us an email about what kinds of services you are seeking- </p>
                     <link rel="stylesheet" href="http://www.thecustomerfactor.com/css/tiny.css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script type="text/javascript" src="http://www.thecustomerfactor.com/js/tinybox.js"></script><div id="thanks_div" class="grayBox"><div class="thanks">Thanks for your interest. We will get back to you as soon as we can!</div></div><a href="javascript:void(0)" onClick="TINY.box.show({iframe:'http://www.thecustomerfactor.com/bid.php?id=anVzdGNsZWFu&c=VVM=',boxid:'frameless',width:860,height:550,fixed:false,maskid:'bluemask',maskopacity:40})"> <img src="http://www.thecustomerfactor.com/images/script/checkestimate_blue.png" height="50" width="260" alt="Click here to message us"> </a>
                     <br /><br />
                     <a href="sitemap.html">View Sitemap</a>
+                    <br/><br/>
+                    <font size="-5">Home window cleaning, commercial window cleaning, Window cleaner, window cleaning, window washer, window cleaning service, window washing service, home window cleaner, residential window cleaning service, residential window washing, residential window washers, residential window cleaning, professional window cleaner, home window washing, outdoor window cleaner, professional commercial window cleaning, exterior window cleaner, commercial window cleaners, exterior window cleaning services, professional window washers, window cleaning business, commercial window washers, home window cleaning, residential window cleaners, all clean windows</font>
                 </div>
             </div>
         </div>
@@ -258,7 +323,6 @@
     ga('send', 'pageview');
 
     </script>
-
 </body>
 
 </html>
