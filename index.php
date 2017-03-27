@@ -1,17 +1,23 @@
+<?php $file = "index.php";
+$modify_time = filemtime($file);
+header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
+?>
+
 <!DOCTYPE html>
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if (isset($_GET["place"])) {
+            // collect the value
+            $title = $_REQUEST["place"];
+        }
+    }
+?>
+
 <html lang="en">
 
 <head>
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            // collect the value
-            $title = $_REQUEST["place"];
-            if ($title) {
-                echo "<link href=”http://www.justcleanwindowcleaning.com” rel=”canonical” />";
-            }
-        }
-    ?>
 
+    <link href=”http://www.justcleanwindowcleaning.com” rel=”canonical” />
     <link rel="alternate" href="http://www.justcleanwindowcleaning.com" hreflang="en-us" />
     <script type="application/ld+json">
     {
@@ -44,12 +50,7 @@
     <meta name="description" content="Home and commercial window cleaning for <?php if (!empty($title)) { echo $title." and surrounding "; } ?>Metro East">
     <meta name="author" content="Just Clean Window Cleaning">
 
-    <title>Just Clean Window Cleaning
-        <?php if (!empty($title)) {
-            echo " - ".$title;
-        } ?>
-    </title>
-
+    <title>Just Clean Window Cleaning<?php if (!empty($title)) { echo " - ".$title; } ?></title>
     <!-- Bootstrap and Navigation CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -69,9 +70,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="navbar-header page-scroll">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -95,7 +96,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                    	<a class="page-scroll" href="https://www.facebook.com/justcleanwindowcleaning/">Visit us on Facebook!</a>
+                    	<a href="https://www.facebook.com/justcleanwindowcleaning/" target="_blank">Visit us on Facebook!</a>
                     </li>
                 </ul>
             </div>
@@ -105,28 +106,28 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro-section" itemtype="http://schema.org/LocalBusiness">
+    <section id="intro" class="intro-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12" itemscope>
-                  <img src="images/logo.png" alt="Just Clean Window Cleaning is a professional window cleaning service serving St. Clair County, Madison County, and Clinton County"><br /><br />
-                  <h1><b>(618) 806-7476</b></h1>
-                  <?php if (!empty($title)) {
+                <div class="col-lg-12">
+                    <img src="images/logo.png" alt="Just Clean Window Cleaning is a professional window cleaning service serving St. Clair County, Madison County, and Clinton County"><br /><br />
+                    <h1><b>(618) 806-7476</b></h1>
+                    <?php if (!empty($title)) {
                             echo "<p>Proudly serving ".$title." and surrounding Metro East</p>";
                         }
                       else {
                             echo "<p>Proudly serving the Metro East in St. Clair, Madison, and Clinton Counties</p>";
                       }
-                  ?>
-                  <h2>Amazing Spring Special 2017!!!</h2>
-                  <h3><b>Just $159 for up to 20 exterior windows</b></h3>
-                  <p>
-                  Let us help you get a jump on your spring cleaning!
-                  (Storm windows not included. Standard 2 pane windows only.)<br />
-                  Schedule before May 31st to take advantage of this offer!</p><br />
-                  <p>Clean, streak-free windows help define the curb appeal of a home.<br />
+                    ?>
+                    <h2>Amazing Spring Special 2017!!!</h2>
+                    <h3><b>Just $159 for up to 20 exterior windows</b></h3>
+                    <p>
+                    Let us help you get a jump on your spring cleaning!
+                    (Storm windows not included. Standard 2 pane windows only.)<br />
+                    Schedule before May 31st to take advantage of this offer!</p><br />
+                    <p>Clean, streak-free windows help define the curb appeal of a home.<br />
                     It is recommended to have your residential windows washed at least twice a year, but ideally they are cleaned the beginning of each season.</p>
-                 <p><a class="btn btn-social btn-facebook" href="https://www.facebook.com/justcleanwindowcleaning/"><span class="fa fa-facebook"></span><strong>Like us on Facebook!</strong></a></p>
+                    <p><a class="btn btn-social btn-facebook" href="https://www.facebook.com/justcleanwindowcleaning/"><span class="fa fa-facebook"></span><strong>Like us on Facebook!</strong></a></p>
                 </div>
             </div>
         </div>
@@ -137,8 +138,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Cleaning with Pure Water</h1>
-
+                    <h1>About</h1>
+                    <h3>Cleaning with Pure Water</h3>
                     <div class="row"> <!-- FIRST ROW -->
                       <div class="col-sm-6">
                         <p align="justify">Just Clean Window Cleaning uses one key ingredient: pure water! Purified water is delivered through a purification system that hooks up straight from your home’s water spigots. This means that your windows are cleaned without chemical additives. There is no residue or buildup on the surface and it leaves windows spot free after drying!</p>
@@ -292,7 +293,7 @@
                       <img src="images/windowCount.jpg" alt="In order to give an accurate estimate for your future service, use this guide to count the windows on your home" alt="We guarantee that your windows will be spot and streak free!"></p>
                     <strong>Call us at 618-806-7476</strong><br />
                     <p>Or, use the link below to send us an email about what kinds of services you are seeking- </p>
-                    <link rel="stylesheet" href="http://www.thecustomerfactor.com/css/tiny.css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script type="text/javascript" src="http://www.thecustomerfactor.com/js/tinybox.js"></script><div id="thanks_div" class="grayBox"><div class="thanks">Thanks for your interest. We will get back to you as soon as we can!</div></div><a href="javascript:void(0)" onClick="TINY.box.show({iframe:'http://www.thecustomerfactor.com/bid.php?id=anVzdGNsZWFu&c=VVM=',boxid:'frameless',width:860,height:550,fixed:false,maskid:'bluemask',maskopacity:40})"> <img src="http://www.thecustomerfactor.com/images/script/checkestimate_blue.png" height="50" width="260" alt="Click here to message us"> </a>
+                    <!-- <link rel="stylesheet" href="http://www.thecustomerfactor.com/css/tiny.css" /> --><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script type="text/javascript" src="http://www.thecustomerfactor.com/js/tinybox.js"></script><div id="thanks_div" class="grayBox"><div class="thanks">Thanks for your interest. We will get back to you as soon as we can!</div></div><a href="javascript:void(0)" onClick="TINY.box.show({iframe:'http://www.thecustomerfactor.com/bid.php?id=anVzdGNsZWFu&c=VVM=',boxid:'frameless',width:860,height:550,fixed:false,maskid:'bluemask',maskopacity:40})"> <img src="http://www.thecustomerfactor.com/images/script/checkestimate_blue.png" height="50" width="260" alt="Click here to message us"> </a>
                     <br /><br />
                     <a href="sitemap.html">View Sitemap</a>
                     <br/><br/>

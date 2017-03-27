@@ -1,3 +1,7 @@
 node_modules
 *.log
 .DS_Store
+.htaccess
+bootstrap-social.css
+font-awesome.css
+srolling-nav.css

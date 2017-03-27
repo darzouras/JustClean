@@ -6408,7 +6408,6 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
 
 /*!
  * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
@@ -6435,7 +6434,7 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
+
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -6684,7 +6683,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     min-height: 100%;
-    padding-top: 150px;
+    padding-top: 75px;
     padding-bottom: 75px;
     text-align: center;
     background: #fff;
@@ -6693,7 +6692,7 @@ of those sections to manage the look and feel of the site. */
 
 .about-section {
     min-height: 100%;
-    padding-top: 75px;
+    padding-top: 70px;
     padding-bottom: 75px;
     text-align: center;
     background: #eee;
