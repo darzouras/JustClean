@@ -65,45 +65,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            <div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
-                        <a class="page-scroll" href="#page-top">Top</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                    	<a href="https://www.facebook.com/justcleanwindowcleaning/" target="_blank">Visit us on Facebook!</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<?php include "header.html" ?>
 
     <!-- Intro Section -->
     <section id="intro" class="intro-section">
@@ -291,17 +253,18 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
                     <h1>Contact us for More Information</h1>
                     <p>Before calling, take count of the windows of your home that need cleaning- this is how we count them here at Just Clean Window Cleaning:<br />
                       <img src="images/windowCount.jpg" alt="In order to give an accurate estimate for your future service, use this guide to count the windows on your home" alt="We guarantee that your windows will be spot and streak free!"></p>
-                    <strong>Call us at 618-806-7476</strong><br />
-                    <p>Or, use the link below to send us an email about what kinds of services you are seeking- </p>
+                    <h3>Call us at 618-806-7476</h3>
+                    <p>Or, use the link below to send us an email about what kinds of services you are seeking- </p><br />
                     <!-- <link rel="stylesheet" href="http://www.thecustomerfactor.com/css/tiny.css" /> --><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script type="text/javascript" src="http://www.thecustomerfactor.com/js/tinybox.js"></script><div id="thanks_div" class="grayBox"><div class="thanks">Thanks for your interest. We will get back to you as soon as we can!</div></div><a href="javascript:void(0)" onClick="TINY.box.show({iframe:'http://www.thecustomerfactor.com/bid.php?id=anVzdGNsZWFu&c=VVM=',boxid:'frameless',width:860,height:550,fixed:false,maskid:'bluemask',maskopacity:40})"> <img src="http://www.thecustomerfactor.com/images/script/checkestimate_blue.png" height="50" width="260" alt="Click here to message us"> </a>
                     <br /><br />
-                    <a href="sitemap.html">View Sitemap</a>
-                    <br/><br/>
                     <font size="-5">Home window cleaning, commercial window cleaning, Window cleaner, window cleaning, window washer, window cleaning service, window washing service, home window cleaner, residential window cleaning service, residential window washing, residential window washers, residential window cleaning, professional window cleaner, home window washing, outdoor window cleaner, professional commercial window cleaning, exterior window cleaner, commercial window cleaners, exterior window cleaning services, professional window washers, window cleaning business, commercial window washers, home window cleaning, residential window cleaners, all clean windows</font>
                 </div>
             </div>
         </div>
     </section>
+
+    <?php include "footer.html" ?>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
