@@ -6,7 +6,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
 <!DOCTYPE html>
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        if (isset($_GET["place"])) {]
+        if (isset($_GET["place"])) {
             // collect the value
             $title = $_REQUEST["place"];
         }
@@ -73,6 +73,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
                 <div class="col-lg-12">
                     <img src="images/logo.png" alt="Just Clean Window Cleaning is a professional window cleaning service serving St. Clair County, Madison County, and Clinton County"><br /><br />
                     <h1><b>(618) 806-7476</b></h1>
+                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script type="text/javascript" src="http://www.thecustomerfactor.com/js/tinybox.js"></script><a href="javascript:void(0)" onClick="TINY.box.show({iframe:'http://www.thecustomerfactor.com/bid.php?id=anVzdGNsZWFu&c=VVM=',boxid:'frameless',width:860,height:550,fixed:false,maskid:'bluemask',maskopacity:40})"> <img src="http://www.thecustomerfactor.com/images/script/checkestimate_blue.png" height="50" width="260" alt="Click here to message us"></a>
                     <?php if (!empty($title)) {
                             echo "<p>Proudly serving ".$title." and surrounding Metro East";
                         }
@@ -81,31 +82,27 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
                       }
                     ?>
                     <br />
-                    Just Clean Window Cleaning is a professional window cleaning business that uses <b>pure water</b> to wash windows to a spot and streak free finish. That means that your windows are treated without harsh chemicals that can damage your lawn, siding, and windowsills. Call today to schedule a free at-home estimate at your convenience! Make sure to ask about our seasonal offer:</p>
+                    Just Clean Window Cleaning is a professional window cleaning business that uses <b>pure water</b> to wash windows to a spot- and streak-free finish. That means that your windows are treated without harsh chemicals that can damage your lawn, siding, and windowsills. Call today to schedule a free at-home estimate at your convenience and to take advantage of our seasonal offers!</p>
+                    <p>Clean, streak-free windows help define the curb appeal of a home.<br />
+                    It is recommended to have your residential windows washed at least twice a year, but ideally they are cleaned at the beginning of each season.</p>
                     <h2>Amazing Spring Special 2017!!!</h2>
                     <h3><b>Just $159 for up to 20 exterior windows</b></h3>
                     <p>
                     Let us help you get a jump on your spring cleaning!
-                    (Storm windows not included. Standard 2 pane windows only.)<br />
+                    (Storm windows not included. Standard double-pane windows only.)<br />
                     Schedule before May 31st to take advantage of this offer!</p><br />
-                    <p>Clean, streak-free windows help define the curb appeal of a home.<br />
-                    It is recommended to have your residential windows washed at least twice a year, but ideally they are cleaned the beginning of each season.</p>
                     <p><a class="btn btn-social btn-facebook" href="https://www.facebook.com/justcleanwindowcleaning/"><span class="fa fa-facebook"></span><strong>Like us on Facebook!</strong></a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <?php include "about.html" ?>
+    <?php //include "about.html" ?>
 
-    <!-- Services Section -->
-    <?php include "service.html" ?>
+    <?php //include "services.html" ?>
 
-    <!-- Contact Section -->
-    <?php include "contact.html" ?>
+    <?php //include "contact.html" ?>
 
-    <!-- Footer -->
     <?php include "footer.html" ?>
 
     <!-- jQuery -->

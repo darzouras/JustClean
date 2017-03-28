@@ -22,7 +22,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
 	<link href="css/scrolling-nav.css" rel="stylesheet">
 </head>
 <body>
-	<?php insert "header.html" ?>
+	<?php include "header.html" ?>
 
 	<section id="map" class="intro-section">
 	<div class="container">
@@ -39,85 +39,26 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
 					<li><a href="/#contact">Contact</a></li>
 				</ul>
 				<ul>Areas Serviced<ul>
-					<li><a href="/?place=St.+Clair+County">St. Clair County</a></li>
-					<li><a href="/?place=Madison+County">Madison County</a></li>
-					<li><a href="/?place=Clinton+County">Clinton County</a></li>
-					<li><a href="/?place=Washington+County">Washington County</a></li>
-					<li><a href="/?place=Monroe+County">Monroe County</a></li>
-					<li><a href="/?place=Randolph+County">Randolph County</a></li>
-                    <li><a href="/?place=Belleville">Belleville</a></li>
-					<li><a href="/?place=Cahokia">Cahokia</a></li>
-					<li><a href="/?place=Caseyville">Caseyville</a></li>
-					<li><a href="/?place=Collinsville">Collinsville</a></li>
-					<li><a href="/?place=Fairview+Heights">Fairview Heights</a></li>
-					<li><a href="/?place=Fayetteville">Fayetteville</a></li>
-					<li><a href="/?place=Freeburg">Freeburg</a></li>
-					<li><a href="/?place=Lebanon">Lebanon</a></li>
-					<li><a href="/?place=Lenzburg">Lenzburg</a></li>
-					<li><a href="/?place=Marissa">Marissa</a></li>
-					<li><a href="/?place=Mascoutah">Mascoutah</a></li>
-					<li><a href="/?place=Millstadt">Millstadt</a></li>
-					<li><a href="/?place=New+Athens">New Athens</a></li>
-					<li><a href="/?place=O'Fallon">O'Fallon</a></li>
-					<li><a href="/?place=Scott+Airforce+Base">Scott AFB</a></li>
-					<li><a href="/?place=Shiloh">Shiloh</a></li>
-					<li><a href="/?place=Smithton">Smithton</a></li>
-					<li><a href="/?place=St.+Libory">St. Libory</a></li>
-					<li><a href="/?place=Summerfield">Summerfield</a></li>
-					<li><a href="/?place=Swansea">Swansea</a></li>
-					<li><a href="/?place=Alton">Alton</a></li>
-					<li><a href="/?place=Edwardsville">Edwardsville</a></li>
-					<li><a href="/?place=Granite+City">Granite City</a></li>
-					<li><a href="/?place=Highland">Highland</a></li>
-					<li><a href="/?place=Troy">Troy</a></li>
-					<li><a href="/?place=Wood+River">Wood River</a></li>
-					<li><a href="/?place=Alhambra">Alhambra</a></li>
-					<li><a href="/?place=Bethalto">Bethalto</a></li>
-					<li><a href="/?place=East+Alton">East Alton</a></li>
-					<li><a href="/?place=Glen+Carbon">Glen Carbon</a></li>
-					<li><a href="/?place=Godfrey">Godfrey</a></li>
-					<li><a href="/?place=Grantfork">Grantfork</a></li>
-					<li><a href="/?place=Hamel">Hamel</a></li>
-					<li><a href="/?place=Marine">Marine</a></li>
-					<li><a href="/?place=Maryville">Maryville</a></li>
-					<li><a href="/?place=New+Douglas">New Douglas</a></li>
-					<li><a href="/?place=Pontoon+Beach">Pontoon Beach</a></li>
-					<li><a href="/?place=Roxana">Roxana</a></li>
-					<li><a href="/?place=South+Roxana">South Roxana</a></li>
-					<li><a href="/?place=St.+Jacob">St. Jacob</a></li>
-					<li><a href="/?place=Breese">Breese</a></li>
-					<li><a href="/?place=Carlyle">Carlyle</a></li>
-					<li><a href="/?place=Trenton">Trenton</a></li>
-					<li><a href="/?place=Albers">Albers</a></li>
-					<li><a href="/?place=Aviston">Aviston</a></li>
-					<li><a href="/?place=Bartelso">Bartelso</a></li>
-					<li><a href="/?place=Beckemeyer">Beckemeyer</a></li>
-					<li><a href="/?place=Damiansville">Damiansville</a></li>
-					<li><a href="/?place=Germantown">Germantown</a></li>
-					<li><a href="/?place=Hoffman">Hoffman</a></li>
-					<li><a href="/?place=Keyesport+(Southwestern+Half)">Keyesport (Southwestern half)</a></li>
-					<li><a href="/?place=Huey">Huey</a></li>
-					<li><a href="/?place=New+Baden">New Baden</a></li>
-					<li><a href="/?place=Addieville">Addieville</a></li>
-					<li><a href="/?place=Ashely">Ashley</a></li>
-					<li><a href="/?place=Du+Bois">Du Bois</a></li>
-					<li><a href="/?place=Hoyleton">Hoyleton</a></li>
-					<li><a href="/?place=Irvington">Irvington</a></li>
-					<li><a href="/?place=Nashville">Nashville</a></li>
-					<li><a href="/?place=New+Minden">New Minden</a></li>
-					<li><a href="/?place=Oakdale">Oakdale</a></li>
-					<li><a href="/?place=Okawville">Okawville</a></li>
-					<li><a href="/?place=Radom">Radom</a></li>
-					<li><a href="/?place=Richview">Richview</a></li>
-					<li><a href="/?place=Venedy">Venedy</a></li>
-					<li><a href="/?place=Wamac">Wamac</a></li>
-					<li><a href="/?place=Columbia">Columbia</a></li>
-					<li><a href="/?place=Waterloo">Waterloo</a></li>
-					<li><a href="/?place=Hecker">Hecker</a>
+					<p><a href="/?place=St.+Clair+County">St. Clair County</a> &bull; <a href="/?place=Madison+County">Madison County</a> &bull; <a href="/?place=Clinton+County">Clinton County</a> &bull; <a href="/?place=Washington+County">Washington County</a> &bull; <a href="/?place=Monroe+County">Monroe County</a> &bull; <a href="/?place=Randolph+County">Randolph County</a></p>
+                    <p><a href="/?place=Belleville">Belleville</a> &bull; <a href="/?place=Cahokia">Cahokia</a> &bull; <a href="/?place=Caseyville">Caseyville</a> &bull; <a href="/?place=Collinsville">Collinsville</a> &bull; <a href="/?place=Fairview+Heights">Fairview Heights</a> &bull;
+                    <a href="/?place=Fayetteville">Fayetteville</a> &bull; <a href="/?place=Freeburg">Freeburg</a> &bull; <a href="/?place=Lebanon">Lebanon</a> &bull; <a href="/?place=Lenzburg">Lenzburg</a> &bull;<a href="/?place=Marissa">Marissa</a> &bull;
+                    <a href="/?place=Mascoutah">Mascoutah</a> &bull; <a href="/?place=Millstadt">Millstadt</a> &bull; <a href="/?place=New+Athens">New Athens</a> &bull; <a href="/?place=O'Fallon">O'Fallon</a> &bull; <a href="/?place=Scott+Airforce+Base">Scott AFB</a> &bull;
+                    <a href="/?place=Shiloh">Shiloh</a> &bull; <a href="/?place=Smithton">Smithton</a> &bull; <a href="/?place=St.+Libory">St. Libory</a> &bull; <a href="/?place=Summerfield">Summerfield</a> &bull; <a href="/?place=Swansea">Swansea</a> &bull;
+                    <a href="/?place=Alton">Alton</a> &bull; <a href="/?place=Edwardsville">Edwardsville</a> &bull; <a href="/?place=Granite+City">Granite City</a> &bull; <a href="/?place=Highland">Highland</a> &bull; <a href="/?place=Troy">Troy</a> &bull;
+                    <a href="/?place=Wood+River">Wood River</a> &bull; <a href="/?place=Alhambra">Alhambra</a> &bull; <a href="/?place=Bethalto">Bethalto</a> &bull; <a href="/?place=East+Alton">East Alton</a> &bull; <a href="/?place=Glen+Carbon">Glen Carbon</a> &bull;
+                    <a href="/?place=Godfrey">Godfrey</a> &bull; <a href="/?place=Grantfork">Grantfork</a> &bull; <a href="/?place=Hamel">Hamel</a> &bull; <a href="/?place=Marine">Marine</a> &bull; <a href="/?place=Maryville">Maryville</a> &bull;
+                    <a href="/?place=New+Douglas">New Douglas</a> &bull; <a href="/?place=Pontoon+Beach">Pontoon Beach</a> &bull; <a href="/?place=Roxana">Roxana</a> &bull; <a href="/?place=South+Roxana">South Roxana</a> &bull; <a href="/?place=St.+Jacob">St. Jacob</a> &bull;
+                    <a href="/?place=Breese">Breese</a> &bull; <a href="/?place=Carlyle">Carlyle</a> &bull; <a href="/?place=Trenton">Trenton</a> &bull; <a href="/?place=Albers">Albers</a> &bull; <a href="/?place=Aviston">Aviston</a> &bull;
+                    <a href="/?place=Bartelso">Bartelso</a> &bull; <a href="/?place=Beckemeyer">Beckemeyer</a> &bull; <a href="/?place=Damiansville">Damiansville</a> &bull; <a href="/?place=Germantown">Germantown</a> &bull; <a href="/?place=Hoffman">Hoffman</a> &bull;
+                    <a href="/?place=Keyesport+(Southwestern+Half)">Keyesport (Southwestern half)</a> &bull; <a href="/?place=Huey">Huey</a> &bull; <a href="/?place=New+Baden">New Baden</a> &bull; <a href="/?place=Addieville">Addieville</a> &bull; <a href="/?place=Ashely">Ashley</a> &bull;
+                    <a href="/?place=Du+Bois">Du Bois</a> &bull; <a href="/?place=Hoyleton">Hoyleton</a> &bull; <a href="/?place=Irvington">Irvington</a> &bull; <a href="/?place=Nashville">Nashville</a> &bull; <a href="/?place=New+Minden">New Minden</a> &bull;
+                    <a href="/?place=Oakdale">Oakdale</a> &bull; <a href="/?place=Okawville">Okawville</a> &bull; <a href="/?place=Radom">Radom</a> &bull; <a href="/?place=Richview">Richview</a> &bull; <a href="/?place=Venedy">Venedy</a> &bull;
+                    <a href="/?place=Wamac">Wamac</a> &bull; <a href="/?place=Columbia">Columbia</a> &bull; <a href="/?place=Waterloo">Waterloo</a> &bull; <a href="/?place=Hecker">Hecker</a></p>
+
 			</div>
 		</div>
 	</div>
 	</section>
 
-	<?php insert "footer.html" ?>
+	<?php include "footer.html" ?>
 </body>

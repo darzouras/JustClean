@@ -6695,8 +6695,8 @@ of those sections to manage the look and feel of the site. */
     padding-top: 70px;
     padding-bottom: 75px;
     text-align: center;
-    background: #eee;
-    opacity: .9;
+    background: #fff;
+    opacity: .8;
 }
 
 .services-section {
@@ -6705,7 +6705,7 @@ of those sections to manage the look and feel of the site. */
     padding-bottom: 75px;
     text-align: center;
     background: #fff;
-    opacity: .9;
+    opacity: .8;
 }
 
 .contact-section {
@@ -6713,8 +6713,8 @@ of those sections to manage the look and feel of the site. */
     padding-top: 75px;
     padding-bottom: 75px;
     text-align: center;
-    background: #eee;
-    opacity: .9;
+    background: #fff;
+    opacity: .8;
 }
 
 /* These table styles are used for the services table */
@@ -6776,3 +6776,7 @@ body {
 .btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{background-image:none}
 .btn-facebook.disabled:hover,.btn-facebook[disabled]:hover,fieldset[disabled] .btn-facebook:hover,.btn-facebook.disabled:focus,.btn-facebook[disabled]:focus,fieldset[disabled] .btn-facebook:focus,.btn-facebook.disabled.focus,.btn-facebook[disabled].focus,fieldset[disabled] .btn-facebook.focus{background-color:#3b5998;border-color:rgba(0,0,0,0.2)}
 .btn-facebook .badge{color:#3b5998;background-color:#fff}
+
+footer {
+    font-size: small;
+}
