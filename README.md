@@ -1,7 +1,7 @@
 # Website for Just Clean Window Cleaning
 Live at [justcleanwindowcleaning.com](http://www.justcleanwindowcleaning.com)
 
-This single-page website was created for a small business in O'Fallon, IL.
+Originally a single page website created for a small business in O'Fallon, IL. Quickly expanded into a multiple page website that uses PHP to insert headers and footers into the different pages.
 
 ##### SEO Optimization
 I'm always looking out for more ways to make this website more visible on search engines.
