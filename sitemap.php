@@ -1,3 +1,8 @@
+<?php $file = "sitemap.php";
+$modify_time = filemtime($file);
+header("Last-Modified: " . gmdate("D, d M Y H:i:s", $modify_time) . " GMT");
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,6 +22,8 @@
 	<link href="css/scrolling-nav.css" rel="stylesheet">
 </head>
 <body>
+	<?php insert "header.html" ?>
+
 	<section id="map" class="intro-section">
 	<div class="container">
 		<div class="row">
@@ -28,8 +35,8 @@
 				<ul>
 					<li><a href="/index.php">Home Page</a></li>
 					<li><a href="/about.php">About</a></li>
-					<li><a href="/services.php">Services</a></li>
-					<li><a href="/contact.php">Contact</a></li>
+					<li><a href="/#services">Services</a></li>
+					<li><a href="/#contact">Contact</a></li>
 				</ul>
 				<ul>Areas Serviced<ul>
 					<li><a href="/?place=St.+Clair+County">St. Clair County</a></li>
@@ -38,7 +45,7 @@
 					<li><a href="/?place=Washington+County">Washington County</a></li>
 					<li><a href="/?place=Monroe+County">Monroe County</a></li>
 					<li><a href="/?place=Randolph+County">Randolph County</a></li>
-          <li><a href="/?place=Belleville">Belleville</a></li>
+                    <li><a href="/?place=Belleville">Belleville</a></li>
 					<li><a href="/?place=Cahokia">Cahokia</a></li>
 					<li><a href="/?place=Caseyville">Caseyville</a></li>
 					<li><a href="/?place=Collinsville">Collinsville</a></li>
@@ -92,7 +99,7 @@
 					<li><a href="/?place=Huey">Huey</a></li>
 					<li><a href="/?place=New+Baden">New Baden</a></li>
 					<li><a href="/?place=Addieville">Addieville</a></li>
-					<li><a href="/?place=Ashley">Ashley</a></li>
+					<li><a href="/?place=Ashely">Ashley</a></li>
 					<li><a href="/?place=Du+Bois">Du Bois</a></li>
 					<li><a href="/?place=Hoyleton">Hoyleton</a></li>
 					<li><a href="/?place=Irvington">Irvington</a></li>
@@ -111,4 +118,6 @@
 		</div>
 	</div>
 	</section>
+
+	<?php insert "footer.html" ?>
 </body>
